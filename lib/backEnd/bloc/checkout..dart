@@ -47,6 +47,29 @@ class Checkout extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
+                            'Qty:',
+                            style: TextStyle(
+                                fontSize: screenSize.screenHeight * 2.5,
+                                color: Theme.of(context).primaryColor,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            snapshot.data['cart items'].length.toString(),
+                            style: TextStyle(
+                                fontSize: screenSize.screenHeight * 2.2,
+                                color: Theme.of(context).primaryColor,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: screenSize.screenWidth * 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
                             'Total',
                             style: TextStyle(
                                 fontSize: screenSize.screenHeight * 3,
